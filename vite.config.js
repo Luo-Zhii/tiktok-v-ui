@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
+import rewriteAll from 'vite-plugin-rewrite-all';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
   base: '/tiktok-v-ui/',
+  plugins: [react(), rewriteAll()],
 });
